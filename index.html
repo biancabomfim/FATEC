@@ -1,28 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Usuário</title>
-    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Pokemon</title>
 </head>
 <body>
-    <div class="w3-display-middle">
+   <div class="container">
+    <div class="pokemon" id="pokemon">
         
-        <div class="w3-panel w3-pale-red w3-border">
-            <h1>Usuarios</h1>
-            <a href="criaruser.html" class="w3-btn">Cadastrar</a>
-            <a href="todosusers.html" class="w3-btn">Listar todos</a>
-            <a href="buscaruser.html" class="w3-btn">Buscar</a>
-        </div>
     </div>
-    <script>
-        window.onload = function() {
-            fetch('/backend/token')
-                .then(response => response.json())
-                .then(data => localStorage.setItem('token', data.token));
-        }
-        
-    </script>
+    <button onclick="anterior()">Anterior</button>
+    <button onclick="proximo()">Proximo</button>
+   </div> 
 </body>
 </html>
+<script src="index.js"></script>
